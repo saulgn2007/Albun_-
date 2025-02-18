@@ -1,61 +1,73 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
-    padding: 10px;
-}
-header {
+    padding: 0;
     text-align: center;
-    background-color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    background: #ff4d79;
     color: white;
-    padding: 10px 0;
+    padding: 15px;
+    font-size: 18px;
 }
-h1 {
-    margin: 0;
-    font-size: 1.8em;
-}
+
 .tabs {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    background: #ff99ac;
+    padding: 10px 0;
+    border-bottom: 2px solid #ff4d79;
 }
+
 .tab {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #ddd;
-    border: 1px solid #ccc;
+    flex: none;
+    padding: 10px 15px;
     margin: 0 5px;
-    border-radius: 5px;
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.tab:hover {
+    background: #ffe6ea;
+}
+
+.active-tab {
+    background: #ff4d79;
+    color: white;
     font-weight: bold;
 }
-.tab:hover {
-    background-color: #ccc;
-}
+
 .tab-content {
     display: none;
     padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-    border-radius: 5px;
 }
-.active-tab {
-    background-color: #e04a4a;
-    color: white;
-}
+
 .active-content {
     display: block;
 }
+
 .album {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 10px;
     justify-content: center;
-    gap: 15px;
 }
+
 .foto {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.foto:hover {
+    transform: scale(1.05);
 }
